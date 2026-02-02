@@ -90,27 +90,27 @@
                         </tr>
                     </thead>
                     <tbody id="plans-body">
-                        <!-- プラン1: 基本モニタリング -->
+                        <!-- プラン1: 基本モニタリング (初期表示は詳細版) -->
                         <tr id="plan-base" class="plan-row bg-slate-50 rounded-2xl transition-all">
                             <td class="py-5 pl-6 rounded-l-2xl border-y border-l">
                                 <div id="base-package-name" class="font-bold text-slate-900">クイック・モニタリング</div>
-                                <div id="base-package-components" class="text-xs text-slate-500">A状態(短縮)</div>
+                                <div id="base-package-components" class="text-xs text-slate-500 font-medium">A状態(詳細)</div>
                             </td>
                             <td class="py-5 text-center border-y">
-                                <span class="accuracy-label px-3 py-1 bg-slate-200 text-slate-700 rounded-full text-xs font-bold">標準</span>
+                                <span class="accuracy-label px-3 py-1 bg-blue-500 text-white rounded-full text-xs font-bold transition-all">高い</span>
                             </td>
                             <td class="py-5 border-y text-sm text-slate-600">燃料・満足度</td>
-                            <td id="time-base" class="py-5 text-right pr-6 rounded-r-2xl border-y border-r font-bold text-blue-700">約 4 分</td>
+                            <td id="time-base" class="py-5 text-right pr-6 rounded-r-2xl border-y border-r font-bold text-blue-700">約 8 分</td>
                         </tr>
 
                         <!-- プラン2: 要因特定 -->
                         <tr id="plan-subject" class="plan-row bg-slate-50 rounded-2xl transition-all">
                             <td class="py-5 pl-6 rounded-l-2xl border-y border-l">
                                 <div class="font-bold text-slate-900">要因深掘りパッケージ</div>
-                                <div class="text-xs text-slate-500 plan-detail" data-components="A状態+A科目別">A状態(詳細)+A科目別(詳細)</div>
+                                <div class="text-xs text-slate-500 font-medium plan-detail" data-components="A状態+A科目別">A状態(詳細)+A科目別(詳細)</div>
                             </td>
                             <td class="py-5 text-center border-y">
-                                <span class="accuracy-label px-3 py-1 bg-blue-500 text-white rounded-full text-xs font-bold">高い</span>
+                                <span class="accuracy-label px-3 py-1 bg-blue-500 text-white rounded-full text-xs font-bold transition-all">高い</span>
                             </td>
                             <td class="py-5 border-y text-sm text-slate-600">燃料・満足度 ＋ 項目別詳細</td>
                             <td id="time-subject" class="py-5 text-right pr-6 rounded-r-2xl border-y border-r font-bold text-blue-700">約 14 分</td>
@@ -120,10 +120,10 @@
                         <tr id="plan-mental" class="plan-row bg-slate-50 rounded-2xl transition-all">
                             <td class="py-5 pl-6 rounded-l-2xl border-y border-l">
                                 <div class="font-bold text-slate-900">メンタル・健康重視</div>
-                                <div class="text-xs text-slate-500 plan-detail" data-components="A状態+B状態">A状態(詳細)+B状態(詳細)</div>
+                                <div class="text-xs text-slate-500 font-medium plan-detail" data-components="A状態+B状態">A状態(詳細)+B状態(詳細)</div>
                             </td>
                             <td class="py-5 text-center border-y">
-                                <span class="accuracy-label px-3 py-1 bg-blue-500 text-white rounded-full text-xs font-bold">高い</span>
+                                <span class="accuracy-label px-3 py-1 bg-blue-500 text-white rounded-full text-xs font-bold transition-all">高い</span>
                             </td>
                             <td class="py-5 border-y text-sm text-slate-600">燃料・満足度 ＋ ストレス状態</td>
                             <td id="time-mental" class="py-5 text-right pr-6 rounded-r-2xl border-y border-r font-bold text-blue-700">約 14 分</td>
@@ -133,10 +133,10 @@
                         <tr id="plan-full" class="plan-row bg-slate-50 rounded-2xl transition-all">
                             <td class="py-5 pl-6 rounded-l-2xl border-y border-l">
                                 <div class="font-bold text-slate-900">コンプリート・解析</div>
-                                <div class="text-xs text-slate-500 plan-detail" data-components="A状態+A科目別+B状態">A状態(詳細)+A科目別(詳細)+B状態(詳細)</div>
+                                <div class="text-xs text-slate-500 font-medium plan-detail" data-components="A状態+A科目別+B状態">A状態(詳細)+A科目別(詳細)+B状態(詳細)</div>
                             </td>
                             <td class="py-5 text-center border-y">
-                                <span class="accuracy-label px-3 py-1 bg-blue-500 text-white rounded-full text-xs font-bold">高い</span>
+                                <span class="accuracy-label px-3 py-1 bg-blue-500 text-white rounded-full text-xs font-bold transition-all">高い</span>
                             </td>
                             <td class="py-5 border-y text-sm text-slate-600">離職要因とメンタルを全網羅</td>
                             <td id="time-full" class="py-5 text-right pr-6 rounded-r-2xl border-y border-r font-bold text-blue-700">約 20 分</td>
@@ -150,6 +150,48 @@
                 <span class="mt-1 font-bold italic">Note:</span>
                 <p>上記時間は<b>「追加検査のみ」</b>の合計時間です。初回に必要な「基本検査（約12分）」は含みません。<br>
                 「詳細版」を選択すると設問数が増え、回答の直感的なブレを排除したより精度の高いデータが得られます。</p>
+            </div>
+
+            <!-- Recommended Cycle Section -->
+            <div class="mt-6 p-6 bg-emerald-50 border border-emerald-200 rounded-3xl text-sm text-emerald-900 shadow-inner">
+                <h3 class="text-lg font-bold flex items-center gap-2 mb-4">
+                    <span class="flex items-center justify-center bg-emerald-500 text-white w-6 h-6 rounded-full text-sm">★</span>
+                    オススメの運用サイクル
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Weekly -->
+                    <div class="bg-white/80 backdrop-blur p-4 rounded-2xl border border-emerald-100 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-emerald-600 text-[10px] font-bold mb-1 tracking-wider">毎月 1〜3週目 金曜</div>
+                        <div class="font-bold text-base leading-tight mb-2">B状態(短縮)</div>
+                        <div class="mt-auto pt-2 border-t border-emerald-50 flex justify-between items-center">
+                            <span class="text-[10px] text-slate-400">週次の健康チェック</span>
+                            <span class="text-blue-700 font-mono font-bold">約 2 分</span>
+                        </div>
+                    </div>
+                    <!-- Monthly -->
+                    <div class="bg-white/80 backdrop-blur p-4 rounded-2xl border border-emerald-100 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-emerald-600 text-[10px] font-bold mb-1 tracking-wider">毎月 4週目 金曜</div>
+                        <div class="font-bold text-base leading-tight mb-2">B状態(短縮)<br>+ A状態(短縮)</div>
+                        <div class="mt-auto pt-2 border-t border-emerald-50 flex justify-between items-center">
+                            <span class="text-[10px] text-slate-400 text-xs">月次の燃料・満足度確認</span>
+                            <span class="text-blue-700 font-mono font-bold">約 6 分</span>
+                        </div>
+                    </div>
+                    <!-- Quarterly -->
+                    <div class="bg-white p-4 rounded-2xl border-2 border-amber-300 flex flex-col h-full shadow-md relative overflow-hidden transform hover:scale-[1.02] transition-transform">
+                        <div class="absolute top-0 right-0 bg-amber-400 text-white text-[10px] px-2 py-0.5 font-bold rounded-bl-lg">3/6/9/12月</div>
+                        <div class="text-amber-600 text-[10px] font-bold mb-1 tracking-wider">四半期末 4週目 金曜</div>
+                        <div class="font-bold text-base leading-tight text-amber-900 mb-2">B(詳細)+A(詳細)<br>+A科目別(詳細)</div>
+                        <div class="mt-auto pt-2 border-t border-amber-100 flex justify-between items-center">
+                            <span class="text-[10px] text-amber-700 font-bold">高精度要因解析</span>
+                            <span class="text-amber-700 font-mono font-bold">約 20 分</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center gap-2 text-xs text-emerald-700 opacity-80">
+                    <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+                    このサイクルを繰り返すことで、受検負担を抑えつつ離職兆候を逃さない「高精度な定点観測」が可能です。
+                </div>
             </div>
         </div>
     </div>
